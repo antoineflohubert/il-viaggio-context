@@ -1,0 +1,19 @@
+name: Trigger Private Repo
+
+on:
+  push:
+    paths:
+      - 'design/commands/pending/*.md'
+      - 'questions/pending/*.md'
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger private repo workflow
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.PRIVATE_REPO_PAT }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository_owner }}/il-viaggio-delle-lettere/dispatches \
+            -d '{"event_type": "public-repo-update"}'
