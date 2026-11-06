@@ -1,6 +1,6 @@
 # CONTEXT.md — Il Viaggio delle Lettere
 
-> 🤖 Auto-généré | 📅 2026-10-23 00:05 UTC
+> 🤖 Auto-généré | 📅 2026-11-06 21:19 UTC
 >
 > **Pour charger** : "Lis https://raw.githubusercontent.com/antoineflohubert/il-viaggio-context/main/CONTEXT.md"
 
@@ -302,11 +302,8 @@ Voir [ADR-020](docs/adr/020-design-sessions.md) pour le flux complet (start → 
 
 Les ADRs existent à **deux niveaux** (DELTA-015) :
 
-- **Repo** (`docs/adr/`) — décisions structurantes du BC entier. Index : [docs/adr/index.md](docs/adr/index.md) (16 ADRs).
-- **Module** (`knowledge/modules/{M}/adr/`) — décisions spécifiques à un module. Indexes :
-  - `speech` : [knowledge/modules/speech/adr/index.md](knowledge/modules/speech/adr/index.md) (008, 012)
-  - `progression-mastery` : [knowledge/modules/progression-mastery/adr/index.md](knowledge/modules/progression-mastery/adr/index.md) (009, 011, 015)
-  - `world-navigation` : [knowledge/modules/world-navigation/adr/index.md](knowledge/modules/world-navigation/adr/index.md) (014)
+- **Repo** (`docs/adr/`) — décisions structurantes du BC entier. Index : [docs/adr/index.md](docs/adr/index.md).
+- **Module** (`knowledge/modules/{M}/adr/`) — décisions spécifiques à un module. Index : `knowledge/modules/{M}/adr/index.md` dans chaque module qui a un dossier `adr/`.
 
 **Règle de placement** : un ADR est placé au niveau le plus bas où sa portée s'applique. Un ADR module ne peut pas contredire un ADR repo ; en cas de conflit, le repo prévaut.
 
@@ -314,7 +311,7 @@ Les ADRs existent à **deux niveaux** (DELTA-015) :
 
 **Consulter les ADRs existants avant toute décision architecturale** (index repo + index du module touché — voir § Règle 1).
 
-Pour ajouter un ADR : copier `docs/adr/000-template.md`, numéroter à la suite (prochain libre : 023, numérotation séquentielle à travers tout le repo), placer au niveau approprié, et mettre à jour l'index correspondant.
+Pour ajouter un ADR : copier `docs/adr/000-template.md`, prendre le numéro qui suit le plus grand existant, en regardant `docs/adr/` **et** tous les `knowledge/modules/*/adr/` (numérotation séquentielle à travers tout le repo), placer au niveau approprié, et mettre à jour l'index correspondant.
 
 ---
 
